@@ -6,7 +6,7 @@ if (MINGW)
     set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static-libstdc++ -static-libgcc")
     
     find_library(LIBWINPTHREAD_LIBRARY NAMES libwinpthread.a)
-    target_link_libraries(mon_executable PRIVATE ${LIBWINPTHREAD_LIBRARY})
+    target_link_libraries(main PRIVATE ${LIBWINPTHREAD_LIBRARY})
 endif()
 
 
